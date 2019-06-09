@@ -1,5 +1,5 @@
 <?php
-$variable = 3.14;
+$variable = '3.14';
 
 $boolDescription = 'Это простейший тип. boolean выражает истинность значения. Он может быть либо TRUE, либо FALSE.';
 $floatDescription = 'Числа с плавающей точкой (также известные как "float", "double" или "real").';
@@ -8,24 +8,22 @@ $stringDescription = 'Строка (тип string) - это набор симв�
 $nullDescription = 'Специальное значение NULL представляет собой переменную без значения.';
 $otherDescription = 'Переменные типов Array, Object, Resource.';
 
-$infoFrom = 'https://www.php.net/manual/ru/function.gettype.php';
+$infoFrom = '<a href="https://www.php.net/manual/ru/function.gettype.php">php.net</a>';
 
-echo $variable, ' is ', gettype($variable);
-
+$type = $variable.' is';
 if(is_bool($variable)) {
-  echo "<br> $boolDescription";
+  $type = $type." bool <br> $boolDescription";
 } else if(is_float($variable)) {
-  echo "<br> $floatDescription";
+  $type = $type." float <br> $floatDescription";
 } else if(is_int($variable)) {
-  echo "<br> $intDescription";
+  $type = $type." integer <br> $intDescription";
 } else if(is_string($variable)) {
-  echo "<br> $stringDescription";
+  $type = $type." string <br> $stringDescription";
 } else if(is_null($variable)) {
-  echo "<br> $nullDescription";
+  $type = $type." null <br> $nullDescription";
 } else {
-  echo "<br> $floatDescription";
+  $type = $type." other type <br> $otherDescription";
 }
-echo "<p>Справочная информация любезно предоставленна ресурсом $infoFrom</p>";
 ?>
 
 <!DOCTYPE html>
@@ -36,5 +34,6 @@ echo "<p>Справочная информация любезно предост
 </head>
 <body>
     <p><?=$type?></p>
+    <p>Справочная информация любезно предоставленна ресурсом <?=$infoFrom?></p>
 </body>
 </html>
