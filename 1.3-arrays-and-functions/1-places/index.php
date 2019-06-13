@@ -14,7 +14,7 @@ function generate($rows, $placesPerRow, $avaliableCount) {
 }
 
 function reserve($map, $row, $place) {
-    if ($map[$row + 1][$place + 1] === false) {         //usually humans start counting from '1', lets ad +1 to the array indexes
+    if ($map[$row + 1][$place + 1] === false) {         //usually humans start counting from '1', lets add +1 to the array indexes
         $map[$row + 1][$place + 1] = true;
         return true;
     } else {

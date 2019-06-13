@@ -24,7 +24,7 @@ function reserve($map, $row, $place) {
 
 function findNear($nearPlaces, $map) {
     $rowCount = count($map);
-    $columnCount = count($map[0]);        //no matter what $map[] wwould we count, let it be $map[0]
+    $columnCount = count($map[0]);        //no matter what $map[] would we count, let it be $map[0]
     for ($i = 0; $i < $rowCount; $i++) {
         $place = 0;
         for ($j = 0; $j < $columnCount; $j++) {
