@@ -27,7 +27,6 @@ function findNear($nearPlaces, $map) {
     $columnCount = count($map[0]);        //no matter what $map[] wwould we count, let it be $map[0]
     for ($i = 0; $i < $rowCount; $i++) {
         $place = 0;
-        var_dump($map[$i]);
         for ($j = 0; $j < $columnCount; $j++) {
             if ($j > $columnCount - $nearPlaces + 1) {
                 continue;                 //check first relevant indexes in a row and skip other ones
