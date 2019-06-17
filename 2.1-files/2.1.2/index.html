@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Задача 2. Фотогалерея</title>
+  </head>
+  <body>
+    <form enctype="multipart/form-data" action="upload.php" method="POST">
+        <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+        Отправить этот файл: <input name="userfile" type="file" />
+        <input type="submit" value="Отправить файл" />
+    </form>
+  </body>
+</html>
